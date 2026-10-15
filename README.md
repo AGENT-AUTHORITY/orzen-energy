@@ -1,18 +1,47 @@
-# ORZEN Energy — web institucional
+# ORZEN ENERGY · Sitio institucional (v2)
 
-Sitio estático listo para GitHub Pages. Contiene HTML, CSS, JavaScript, seis fotografías optimizadas a WebP y tres SVG vectoriales.
+Landing estática, adaptable a celular, sin frameworks, pagos ni servicios de backend. Diseño inspirado en la maqueta aprobada: apertura con destello del símbolo, imagen industrial cinematográfica y tarjetas por sector.
 
-## Publicar
-1. Crear repositorio público `orzen-energy` en GitHub.
-2. Subir **el contenido de esta carpeta** a la raíz del repositorio (index.html debe quedar en la raíz).
-3. Settings → Pages → Build and deployment → Deploy from a branch → `main` → `/ (root)` → Save.
-4. El sitio quedará en `https://TU-USUARIO.github.io/orzen-energy/` una vez desplegado.
+## Publicar gratis en GitHub Pages
 
-## Configuración antes de captar leads
-- En `script.js`, cambiar `orzenenergy.comercial@gmail.com` por un correo **real, creado y probado**. Es solo un ejemplo; su disponibilidad no está verificada.
-- El formulario usa `mailto:`; abre el cliente de correo del visitante, no guarda datos ni envía automáticamente. Para captación fiable se requiere un backend o servicio de formularios, con privacidad y consentimiento adecuados.
-- Confirmar con el proveedor energético las zonas y condiciones de atención antes de prometer disponibilidad.
-- Las imágenes de silos y tuberías son ilustrativas de sectores productivos, no pruebas de instalaciones GLP.
+1. Creá un repositorio público `orzen-energy` (o actualizá el existente).
+2. Subí **los archivos directamente a la raíz del repositorio**: `index.html`, `styles.css`, `script.js` y la carpeta `assets`. No subas la carpeta contenedora completa.
+3. GitHub → repositorio → **Settings → Pages → Build and deployment** → `Deploy from a branch` → `main` → `/ (root)` → Save.
+4. El sitio quedará en `https://TU-USUARIO.github.io/orzen-energy/` (GitHub puede demorar en publicar).
 
-## Créditos
-Fotografías aportadas por el usuario, descargadas de Pexels. Conservar los créditos de los autores cuando corresponda. Revisar licencia y condiciones de uso de cada archivo.
+## Correo institucional y formulario (importante)
+
+El formulario prepara un `mailto:`. NO guarda datos, NO envía consultas automáticamente y requiere que la persona confirme desde su aplicación de correo. Antes de compartir la web con empresas, **creá y verificá** la casilla que figura al inicio de `script.js`:
+
+```js
+const CONTACT_EMAIL = 'orzenenergy.comercial@gmail.com';
+```
+
+Esa dirección es una **propuesta, no una cuenta creada ni verificada**. Podés sustituirla por cualquier casilla que ya controles. Sin casilla verificada se pueden perder consultas. En el futuro se puede migrar a un formulario gratuito con integración, o a Supabase, después de decidir almacenamiento, políticas de privacidad y medidas antispam.
+
+Para disponer de `contacto@orzenenergy.com.ar` primero hace falta registrar y controlar el dominio y configurar un servicio de correo o reenvío.
+
+## Editar contenido
+
+- Textos y sectores: `index.html`
+- Estilos, colores y animaciones: `styles.css`
+- Destinatario del formulario, intro, menú: `script.js`
+- Fotografías e isotipos: `assets/`
+
+La intro dura ~3.5 segundos, se puede saltar y aparece solo una vez por sesión. Si la persona prefiere movimiento reducido, no aparece. El brillo en el logo es una animación CSS, no un video.
+
+## Origen y representación comercial
+
+- La foto de la portada proviene de un recorte de una **imagen conceptual generada** que fue aprobada como estética para el sitio. Es ilustrativa, no una instalación real de ORZEN ni un trabajo ejecutado.
+- Las fotos restantes son las imágenes Pexels elegidas y aportadas para el proyecto. Verificá las condiciones de uso, créditos y trazabilidad en las páginas originales antes de una campaña comercial.
+- ORZEN Energy se presenta como vinculación comercial independiente: no afirma ser proveedora, instaladora, distribuidora, representante oficial ni profesional habilitado.
+- Todas las carpetas `assets` están optimizadas a WebP; el logotipo y símbolo se entregan también en SVG.
+
+## Antes del lanzamiento comercial
+
+- [ ] Confirmar la existencia y acceso a la casilla de contacto.
+- [ ] Definir teléfono o WhatsApp de ORZEN para sumar CTA directo.
+- [ ] Revisar el área de cobertura y criterios de calificación con el proveedor.
+- [ ] Formalizar trazabilidad de referidos y acuerdos de comisión.
+- [ ] Verificar identidad de marca y disponibilidad de dominio y redes.
+- [ ] Completar aviso de privacidad conforme al tratamiento real de datos que se vaya a realizar.
