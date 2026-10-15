@@ -1,4 +1,4 @@
-# ORZEN ENERGY · Sitio institucional (v2)
+# ORZEN ENERGY · Sitio institucional (v2.1)
 
 Landing estática, adaptable a celular, sin frameworks, pagos ni servicios de backend. Diseño inspirado en la maqueta aprobada: apertura con destello del símbolo, imagen industrial cinematográfica y tarjetas por sector.
 
@@ -45,3 +45,13 @@ La intro dura ~3.5 segundos, se puede saltar y aparece solo una vez por sesión.
 - [ ] Formalizar trazabilidad de referidos y acuerdos de comisión.
 - [ ] Verificar identidad de marca y disponibilidad de dominio y redes.
 - [ ] Completar aviso de privacidad conforme al tratamiento real de datos que se vaya a realizar.
+
+## Corrección de v2.1: exportación a PDF
+
+La versión original no tenía reglas `@media print`. En impresión aparecía la pantalla de presentación, se perdían las fotografías implementadas como fondos CSS y algunos paneles quedaban ilegibles. Esta versión:
+
+- Esconde la introducción al imprimir y evita páginas vacías.
+- Usa imágenes HTML `<img>` para portada, tarjetas y sección informativa; se pueden imprimir aun con fondos gráficos desactivados.
+- Incorpora estilos de impresión A4 sin modificar la experiencia de navegación.
+
+En Chrome, para conservar los tonos de azul más fielmente: Imprimir → Más ajustes → **Gráficos de fondo** (opcional). Un PDF no puede reproducir la animación del destello; esta funciona en la web interactiva.
