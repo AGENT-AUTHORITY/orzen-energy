@@ -9,12 +9,12 @@ const hideIntro=()=>{
   if(!intro||intro.classList.contains('is-done'))return;
   intro.classList.add('is-done');
   document.body.classList.remove('intro-active');
-  try{sessionStorage.setItem('orzen-intro-v2','seen')}catch(e){}
+  try{sessionStorage.setItem('orzen-intro-v2-2','seen')}catch(e){}
   window.setTimeout(()=>intro.remove(),1000);
 };
 if(intro){
   let alreadySeen=false;
-  try{alreadySeen=sessionStorage.getItem('orzen-intro-v2')==='seen'}catch(e){}
+  try{alreadySeen=sessionStorage.getItem('orzen-intro-v2-2')==='seen'}catch(e){}
   if(alreadySeen||window.matchMedia('(prefers-reduced-motion: reduce)').matches){hideIntro()}
   else{
     document.body.classList.add('intro-active');
@@ -55,7 +55,7 @@ leadForm?.addEventListener('submit',event=>{
   `Teléfono: ${get('telefono')}`,
   `Email: ${get('email')||'No informado'}`,
   `Actividad: ${get('actividad')}`,
-  `Combustible actual: ${get('combustible')||'No informado'}`,
+  `Combustible de interés: ${get('combustible')}`,
   '',
   'Necesidad:',get('necesidad'),'',
   'Autorizo a ORZEN Energy a contactarme y a compartir estos datos con un proveedor energético para evaluar esta solicitud.'

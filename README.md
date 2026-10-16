@@ -1,3 +1,20 @@
+# ORZEN Energy · Sitio V2.2
+
+**Cambios respecto de V2.1**
+- Eliminadas las leyendas públicas de Santa Fe y Entre Ríos en hero, sección contacto y pie de página.
+- El formulario ahora solo permite elegir GLP a granel o Diésel como combustible de interés; es obligatorio seleccionar uno.
+- Corregido el resumen que se prepara por correo para reflejar el combustible de interés.
+- Ajustados algunos textos comerciales y detalles de navegación, tarjetas y formulario.
+- Se preservan los archivos SVG, fotografías, animación y estilos de impresión.
+
+**IMPORTANTE**: La dirección `orzenenergy.comercial@gmail.com` de `script.js` es provisional: creala y verificá que te pertenezca, o cambiala por una dirección tuya válida antes de promocionar la página. El formulario utiliza `mailto:` y necesita que el visitante confirme el envío desde su programa de correo. GitHub Pages no procesa ni almacena formularios.
+
+**Publicación**: subir `index.html`, `styles.css`, `script.js` y carpeta `assets/` a la raíz del repositorio GitHub Pages. En el repositorio Settings → Pages, publicar desde `main` y `/ (root)`. Después probar con Ctrl+F5.
+
+**Nota comercial**: ORZEN se presenta como intermediario, no como instalador ni proveedor de combustible. La atención en cada localidad y la opción diésel están sujetas a disponibilidad de proveedores.
+
+---
+
 # ORZEN ENERGY · Sitio institucional (v2.1)
 
 Landing estática, adaptable a celular, sin frameworks, pagos ni servicios de backend. Diseño inspirado en la maqueta aprobada: apertura con destello del símbolo, imagen industrial cinematográfica y tarjetas por sector.

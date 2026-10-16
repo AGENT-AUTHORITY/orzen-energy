@@ -135,3 +135,35 @@
  .footer-nav{display:none!important}
  .footer-bottom{flex-wrap:wrap!important}
 }
+
+/* ORZEN v2.2 — refinamientos visuales y especialidades */
+@media screen {
+  .header {backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+  .header-cta {box-shadow:0 5px 22px #00152516}
+  .hero-copy {filter:drop-shadow(0 5px 22px #01152527)}
+  .hero-bottom {justify-content:flex-start;gap:clamp(18px,4vw,65px)}
+  .hero-bottom span:not(:last-child)::after {content:' ';display:inline-block;width:4px;height:4px;margin-left:clamp(15px,3.8vw,55px);vertical-align:middle;border-radius:50%;background:#81c4eb;opacity:.84}
+  .industry-card {border:1px solid #c6d7e51c;transition:box-shadow .35s ease,transform .35s ease}
+  .industry-card:hover {box-shadow:0 18px 45px #0827432d;transform:translateY(-3px)}
+  .industry-card:focus-visible {outline:3px solid #66b7ee;outline-offset:3px}
+  .industry-arrow {transition:background .25s ease,color .25s ease,transform .25s ease}
+  .industry-card:hover .industry-arrow {background:white;color:#0a2c48;transform:translateX(3px)}
+  .section-heading h2,.solutions h2,.method h2,.contact h2 {text-wrap:balance}
+  .contact-services {display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 31px}
+  .contact-services span {font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:10px 14px;border:1px solid #82bfe060;color:#d7eaf6;background:#ffffff08;border-radius:30px}
+  .lead-form {border-top:3px solid #7dc0e5;border-radius:3px}
+  .lead-form input:not([type=checkbox]):hover,.lead-form select:hover,.lead-form textarea:hover {border-color:#abc6da}
+  .lead-form input:not([type=checkbox]):focus,.lead-form select:focus,.lead-form textarea:focus {box-shadow:0 0 0 3px #80bee624}
+  .button-submit {transition:background .2s ease, transform .2s ease, box-shadow .2s ease}
+  .button-submit:hover {box-shadow:0 10px 24px #10365a30}
+  .footer-bottom span:last-child {letter-spacing:.04em}
+}
+@media screen and (max-width:600px) {
+ .hero-bottom {gap:10px;justify-content:center}
+ .hero-bottom span:not(:last-child)::after {margin-left:12px}
+ .hero-bottom span:last-child {display:inline;letter-spacing:.08em}
+ .hero-bottom {font-size:7px;bottom:14px}
+ .contact-services {margin:19px 0 25px}
+ .lead-form {padding:28px 20px}
+}
+@media print {.contact-services {display:flex;gap:10px;margin:13px 0}.contact-services span{display:inline-block;border:1px solid #b4c8d9;padding:3px 7px;font-size:8px}}
